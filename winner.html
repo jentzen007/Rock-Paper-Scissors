@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="winner.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <center>
+            <p id="winner"></p>
+        </center>
+        <br>
+        <div class="confetti">
+            <img src="winner.png" alt="">
+        </div>
+        
+    </div>
+
+    <script>
+        function launchConfetti() {
+        for (let i = 0; i < 3; i++) {
+            setTimeout(() => {
+                confetti({
+                    particleCount: 100,
+                    spread: 70,
+                    origin: { y: 0.6 }
+                });
+            }, i * 1000);
+        }
+    }
+
+    window.onload = () => {
+       
+        launchConfetti();
+
+        
+        const winnerText = localStorage.getItem('winner');
+        if (winnerText) {
+            document.getElementById('winner').textContent = winnerText;
+        }
+    };
+    </script>
+    
+</body>
+</html>

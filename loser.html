@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Lost</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="loser.css">
+</head>
+<body>
+    <div class="container">
+        <center>
+            <p id="loser"></p>
+        </center>
+        <br>
+        <div class="confetti">
+            <img src="loser.png" alt="">
+        </div>
+        
+    </div>
+
+    <script>
+        function launchConfetti() {
+        for (let i = 0; i < 3; i++) {
+            setTimeout(() => {
+                confetti({
+                    particleCount: 100,
+                    spread: 70,
+                    origin: { y: 0.6 }
+                });
+            }, i * 1000);
+        }
+    }
+
+    window.onload = () => {
+       
+        launchConfetti();
+
+        
+        const winnerText = localStorage.getItem('loser');
+        if (winnerText) {
+            document.getElementById('loser').textContent = winnerText;
+        }
+    };
+    </script>
+</body>
+</html>

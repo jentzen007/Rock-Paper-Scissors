@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;1,300&display=swap');
+
+body {
+    font-family: rubik;
+    background-image: linear-gradient(95deg,pink,rgb(241, 243, 159));
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+button {
+    margin: 10px;
+}
+
+#choice {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+#one {
+    font-size: 19px;
+    font-weight: 900;
+    margin-right: 80px;
+}
+#two {
+    font-size: 19px;
+    margin-left: 55px;
+    font-weight: 900;
+}
+
+.container {
+    text-align: center;
+    margin-top: 190px;
+    background-color: rgba(0, 0, 0, 0.218);
+    max-width: 480px;
+    padding: 10px;
+    border-radius: 16px;
+}
+
+#Computer-Score, #Your-Score {
+    font-size: 150px;
+    margin: 10%;
+}
+
+#hiphen {
+    font-size: 150px;
+}
+
+#rock {
+    background-image: url('rock.png');
+    background-color: white;
+    border-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: top;
+    background-size: 90px 90px;
+    height: 90px;
+    width: 90px;
+    border-radius: 9px;
+}
+
+#rock:hover {
+    background-color: rgb(182, 182, 182);
+    transition-duration: 200ms;
+}
+
+#rock:active {
+    background-color: rgb(255, 255, 255);
+}
+
+#scissors {
+    background-image: url('scissor.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: top;
+    background-color: white;
+    border-color: transparent;
+    background-size: 90px 90px;
+    height: 94px;
+    width: 94px;
+    border-radius: 9px;
+}
+
+
+#scissors:hover {
+    background-color: rgb(182, 182, 182);
+    transition-duration: 200ms;
+}
+
+#scissors:active {
+    background-color: rgb(255, 255, 255);
+}
+
+
+#paper {
+    background-image: url('hand-paper.png');
+    background-color: white;
+    border-color: transparent;
+    background-size: 90px 90px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: top;
+    height: 90px;
+    width: 90px;
+    border-radius: 9px;
+}
+
+#paper:hover {
+    background-color: rgb(182, 182, 182);
+    transition-duration: 200ms;
+}
+
+#paper:active {
+    background-color: white;
+}
